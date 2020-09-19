@@ -1,34 +1,38 @@
-# COMPAS package template
+# CREATE Lab Package Template
 
-Cookiecutter template for COMPAS extensions.
+This is a COMPAS-opinionated template that automates the set up of a new
+python-based code extension package using
+[cookiecutter](https://cookiecutter.readthedocs.io/). We will, little-by-little,
+give it our own CREATE Lab twist!
 
-[Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/readme.html#)
-is a command-line utility that lets you quickly bootstrap a new project from a template.
-It takes a directory tree and copies it into your new project,
-replacing all the generic info that finds surrounded by templating tags `{{` and `}}` with your project info written in `cookiecutter.json`.
+This repository provides you with the basic infrastructure to kickstart your next project: a base folder structure, auto-documentation, testing, pip installing, and easier-integration with Rhino.
 
-## Features
+## What comes in the box?
 
 * Project directory and file structure
 * Documentation based on [Sphinx](http://www.sphinx-doc.org/en/master/)/[reStructuredText](http://docutils.sourceforge.net/rst.html)
-* Testing framework: [pytest](https://docs.pytest.org/en/latest/)
+* A testing framework: [pytest](https://docs.pytest.org/en/latest/)
 * Basic setup script to create pip installable packages
 * Automation of common tasks for development workflow based on [pyinvoke](http://www.pyinvoke.org/) (generate documentation, run tests, check format, etc.)
 * [EditorConfig](https://editorconfig.org/) integration
-* Minimal Github workflows for CI/CD
+* Minimal [Travis-CI integration](https://travis-ci.org)
 
-## What's included
+### What files are automatically created for you?
 
 * `.github`
 * `data`
 * `docs`
+* `docsource`
 * `examples`
 * `src`
 * `temp`
 * `tests`
+
 * `.bumpversion.cfg`
 * `.editorconfig`
 * `.gitignore`
+* `.travis.yml`
+
 * `AUTHORS.md`
 * `CHANGELOG.md`
 * `CONTRIBUTING.md`
@@ -42,37 +46,37 @@ replacing all the generic info that finds surrounded by templating tags `{{` and
 * `setup.py`
 * `tasks.py`
 
-## Requirements
+## What do you need to install first?
 
 Install `cookiecutter` command line: `pip install cookiecutter`
 
-## Usage
+## How do I use this thing?
 
 In the terminal, go to the folder where you want to place your project:
 
-```bash
-cd <your-projects-folder>
+```
+$ cd <your-projects-folder>
 ```
 
 Generate a new Cookiecutter template layout:
 
-```bash
-cookiecutter gh:compas-dev/tpl-extension
+```
+$ cookiecutter gh:compas-dev/cookiecutter-pypackage
 ```
 
 Go to project folder:
 
-```bash
-cd <project-slug>
+```
+$ cd <project-slug>
 ```
 
-## Additional settings
+## Advanced features
 
-To use the coding style feature with [EditorConfig](https://editorconfig.org/):
+To activate continuous integration (e.g. you are developing a package that is adequately tested, and every time you want to make an official release, you want to make sure all tests - among other things - are adequately passed).
 
-* Some text editors have a native EditorConfig.
-  If yours doesn't you can download the appropriate plugin [here](https://editorconfig.org/#download).
+* [Enable the repository in your Travis CI account](https://travis-ci.org/profile).
 
 ## License
 
-This template is licensed under the terms of the [MIT License](/LICENSE)
+This template is forked from the COMPAS'framework [cookiecutter template for COMPAS extensions](https://github.com/compas-dev/tpl-extension), and as such, it
+is licensed under the terms of the [MIT License](/LICENSE).
