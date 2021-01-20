@@ -52,19 +52,19 @@ Install `cookiecutter` command line: `pip install cookiecutter`
 
 ## How do I use this thing?
 
-In the terminal, go to the folder where you want to place your project:
+In the terminal or Anaconda prompt, go to the folder where you store all of your projects, (such as "repos", "github" etc.):
 
 ```
 $ cd <your-projects-folder>
 ```
 
-Generate a new Cookiecutter template layout:
+Cookiecutter will create a folder for your project and fill it with template files. To instigate this this, run the following command and answer the prompts:
 
 ```
-$ cookiecutter gh:compas-dev/cookiecutter-pypackage
+$ cookiecutter gh:createchaos/create_cookiecutter
 ```
 
-Go to project folder:
+To access your new project folder via the command line:
 
 ```
 $ cd <project-slug>
